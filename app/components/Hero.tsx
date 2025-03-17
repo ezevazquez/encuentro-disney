@@ -1,7 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import React from "react";
+"use client"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { Button } from "./Button"
 
 export function Hero() {
   return (
@@ -9,7 +9,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center px-6"
       >
         <Image
@@ -28,14 +28,12 @@ export function Hero() {
         </p>
       </motion.div>
 
-      <motion.a
-        href="#paquetes"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="mt-8 px-8 py-4 bg-primary text-white text-lg rounded-lg shadow-lg hover:bg-accent transition-all font-semibold"
-      >
-        Explorar Opciones ✨
-      </motion.a>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="mt-8">
+        <Button variant="accent" size="lg" className="shadow-lg">
+          Explorar Opciones ✨
+        </Button>
+      </motion.div>
     </section>
-  );
+  )
 }
+

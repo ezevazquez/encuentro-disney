@@ -1,8 +1,8 @@
-import { sanityClient } from "@/sanity/lib/client";
+import { sanityClient } from "@/sanity/lib/client"
 
 export interface FAQData {
-  pregunta: string;
-  respuesta: string;
+  pregunta: string
+  respuesta: string
 }
 
 export async function getFAQ(): Promise<FAQData[]> {
@@ -11,6 +11,6 @@ export async function getFAQ(): Promise<FAQData[]> {
       pregunta,
       respuesta
     } | order(_createdAt asc)
-  `;
-  return await sanityClient.fetch(query);
+  `
+  return await sanityClient.fetch(query)
 }

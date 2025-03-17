@@ -1,4 +1,4 @@
-import { defineType, defineField } from "sanity";
+import { defineType, defineField } from "sanity"
 
 export default defineType({
   name: "paquete",
@@ -39,4 +39,5 @@ export default defineType({
       },
     }),
   ],
-});
+})
+

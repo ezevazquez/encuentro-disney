@@ -1,10 +1,13 @@
-"use client";
-import { motion } from "framer-motion";
-import { Button } from "./Button";
+"use client"
+import { motion } from "framer-motion"
+import { Button } from "./Button"
 
 export function CTA() {
   return (
-    <section id="contacto" className="py-20 text-center bg-gradient-to-r from-primary to-accent text-white relative overflow-hidden">
+    <section
+      id="contacto"
+      className="py-20 text-center bg-gradient-to-r from-primary to-accent text-white relative overflow-hidden"
+    >
       {/* Decoraciones animadas */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
@@ -25,9 +28,7 @@ export function CTA() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-4xl font-bold mb-4 drop-shadow-lg">
-          ¡Prepárate para la magia! ✨
-        </h2>
+        <h2 className="text-4xl font-bold mb-4 drop-shadow-lg">¡Prepárate para la magia! ✨</h2>
         <p className="text-lg max-w-xl mx-auto mb-6">
           ¿Listo para vivir la experiencia Disney? Contáctanos y planifica tu viaje inolvidable.
         </p>
@@ -37,11 +38,12 @@ export function CTA() {
           transition={{ duration: 0.2 }}
           className="inline-block"
         >
-          <Button variant="default" size="lg">
+          <Button variant="accent" size="lg">
             Contáctanos
           </Button>
         </motion.div>
       </motion.div>
     </section>
-  );
+  )
 }
+

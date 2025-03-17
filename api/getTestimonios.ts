@@ -1,10 +1,9 @@
-import { sanityClient } from "@/sanity/lib/client";
-
+import { sanityClient } from "@/sanity/lib/client"
 
 export interface TestimonioData {
-  nombre: string;
-  comentario: string;
-  imagenUrl?: string;
+  nombre: string
+  comentario: string
+  imagenUrl?: string
 }
 
 export async function getTestimonios(): Promise<TestimonioData[]> {
@@ -14,6 +13,7 @@ export async function getTestimonios(): Promise<TestimonioData[]> {
       comentario,
       "imagenUrl": imagen.asset->url
     } | order(_createdAt desc)
-  `;
-  return await sanityClient.fetch(query);
+  `
+  return await sanityClient.fetch(query)
 }
+

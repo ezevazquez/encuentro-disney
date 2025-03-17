@@ -6,35 +6,50 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --primary: #F20544; /* Color principal inspirado en tu logo */
+  --primary: #f20544; /* Main brand color */
   --primary-foreground: #ffffff;
-  --secondary: #7D4EC2;
+  --secondary: #7d4ec2; /* Purple accent */
   --secondary-foreground: #ffffff;
-  --accent: #F28729;
+  --accent: #f28729; /* Orange accent */
   --accent-foreground: #ffffff;
-  --muted: #F2E0D5;
+  --muted: #f2e0d5;
   --muted-foreground: #1a1a1a;
   --border: #d1d5db;
   --input: #d1d5db;
-  --ring: #7D4EC2;
+  --ring: #7d4ec2;
   --radius: 0.5rem;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --chart-1: 0 84% 60%;
+  --chart-2: 245 58% 51%;
+  --chart-3: 25 95% 53%;
+  --chart-4: 142 71% 45%;
+  --chart-5: 172 66% 50%;
 }
 
 /* 🌙 Dark Mode */
 .dark {
   --background: #1a1a1a;
   --foreground: #ffffff;
-  --primary: #F28729;
+  --primary: #f28729; /* Orange becomes primary in dark mode */
   --primary-foreground: #1a1a1a;
-  --secondary: #9ABF75;
+  --secondary: #9abf75; /* Green accent in dark mode */
   --secondary-foreground: #1a1a1a;
-  --accent: #F20544;
+  --accent: #f20544; /* Red accent in dark mode */
   --accent-foreground: #ffffff;
   --muted: #2d2d2d;
   --muted-foreground: #ffffff;
   --border: #444;
   --input: #444;
-  --ring: #9ABF75;
+  --ring: #9abf75;
+  --card: #2d2d2d;
+  --card-foreground: #ffffff;
+  --popover: #2d2d2d;
+  --popover-foreground: #ffffff;
 }
 
 /* 🎨 Estilo global */
@@ -52,13 +67,14 @@
   }
 }
 
+/* Remove the duplicate button styles since we're using the Button component */
 /* ✨ Estilo de Botones */
-.btn {
+/* .btn {
   @apply px-6 py-3 rounded-lg shadow-md text-lg transition-all;
 }
 
 /* Variantes de Botón */
-.btn-primary {
+/* .btn-primary {
   @apply bg-primary text-white hover:bg-secondary;
 }
 
@@ -68,7 +84,7 @@
 
 .btn-outline {
   @apply border border-primary text-primary hover:bg-primary hover:text-white;
-}
+} */
 
 /* 📦 Cards */
 .card {
@@ -76,7 +92,9 @@
 }
 
 /* 📜 Tipografía */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   @apply font-bold text-primary;
 }
 
@@ -96,3 +114,4 @@ h3 {
 .container {
   @apply max-w-6xl mx-auto px-6;
 }
+

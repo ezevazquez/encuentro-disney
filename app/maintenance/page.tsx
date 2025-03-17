@@ -1,8 +1,7 @@
+"use client"
 
-"use client";
-
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from "framer-motion"
+import type React from "react"
 
 const MaintenancePage: React.FC = () => {
   return (
@@ -18,18 +17,14 @@ const MaintenancePage: React.FC = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.6 }}
           className="mb-6 flex justify-center"
-        >
-        </motion.div>
-        <h1 className="text-3xl font-semibold mb-4 text-[#333333]">
-          Estamos trabajando en nuestra web :)
-        </h1>
-        <p className="text-lg text-[#333333]">
-          Pronto volveremos con contenido mágico para vos y tu familia. 
-        </p>
+        ></motion.div>
+        <h1 className="text-3xl font-semibold mb-4 text-[#333333]">Estamos trabajando en nuestra web :)</h1>
+        <p className="text-lg text-[#333333]">Pronto volveremos con contenido mágico para vos y tu familia.</p>
         <p>¡Gracias por tu paciencia!</p>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default MaintenancePage;
+export default MaintenancePage
+

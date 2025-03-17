@@ -1,4 +1,4 @@
-import { defineType, defineField } from "sanity";
+import { defineType, defineField } from "sanity"
 
 export default defineType({
   name: "testimonio",
@@ -22,4 +22,5 @@ export default defineType({
       options: { hotspot: true },
     }),
   ],
-});
+})
+
