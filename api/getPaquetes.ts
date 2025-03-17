@@ -12,6 +12,7 @@ export interface Paquete {
 export async function getPaquetes(): Promise<Paquete[]> {
   const query = `
     *[_type == "paquete"]{
+      _id,
       nombre,
       descripcion,
       precio,

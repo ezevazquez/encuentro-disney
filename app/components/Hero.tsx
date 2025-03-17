@@ -1,11 +1,41 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React from "react";
+
 export function Hero() {
-    return (
-      <section className="text-center py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white">
-        <h1 className="text-4xl font-bold">Encuentro con Disney</h1>
-        <p className="mt-4 text-lg">
-          Vive la magia de Disney con nuestros paquetes personalizados y experiencias únicas.
+  return (
+    <section className="relative flex flex-col items-center justify-center min-h-screen bg-background text-text">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="text-center px-6"
+      >
+        <Image
+          src="/logo.png"
+          alt="Encuentro con Disney"
+          width={250}
+          height={250}
+          priority
+          className="mx-auto rounded-full shadow-xl border-4 border-primary"
+        />
+        <h1 className="text-5xl font-disney text-primary mt-6 drop-shadow-lg">
+          ¡Vive la magia de Disney con nosotros!
+        </h1>
+        <p className="text-xl text-secondary mt-4 max-w-2xl mx-auto">
+          Planificamos la mejor experiencia para tu viaje soñado con paquetes exclusivos y atención personalizada.
         </p>
-      </section>
-    );
-  }
-  
+      </motion.div>
+
+      <motion.a
+        href="#paquetes"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="mt-8 px-8 py-4 bg-primary text-white text-lg rounded-lg shadow-lg hover:bg-accent transition-all font-semibold"
+      >
+        Explorar Opciones ✨
+      </motion.a>
+    </section>
+  );
+}

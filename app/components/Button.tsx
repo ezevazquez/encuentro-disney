@@ -1,5 +1,5 @@
-"use client"; // Habilitamos modo cliente porque es un componente interactivo
-import { cn } from "@/lib/utils"; // utilidad para concatenar clases (agregada por ShadCN)
+"use client"; 
+import { cn } from "@/lib/utils"; 
 import { VariantProps, cva } from "class-variance-authority";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 
@@ -10,7 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-blue-600 text-white hover:bg-blue-700",  // Botón primario
-        outline: "border border-gray-300 hover:bg-gray-100",   // Botón con borde
+        secondary: "bg-gray-100 text-blue-600 hover:bg-gray-200 border border-gray-300",  // Para fondos blancos
+        outline: "border border-blue-600 text-blue-600 hover:bg-blue-50",   // Borde con hover
       },
       size: {
         sm: "h-8 px-3",

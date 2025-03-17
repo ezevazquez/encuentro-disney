@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Hero } from "./components/Hero";
 import { Paquetes } from "./components/Paquetes";
 import { Testimonios } from "./components/Testimonios";
@@ -17,7 +18,7 @@ export default async function HomePage() {
     <>
       <Hero />
       <main className="container mx-auto px-6">
-        <Paquetes paquetes={paquetes} />
+        <Paquetes paquetes={paquetes as any} />
         <Testimonios testimonios={testimonios} />
         <FAQ faqs={faqs} />
         <CTA />

@@ -1,37 +1,67 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Card } from "./Card";
 
 interface Paquete {
+  _id: string; // ✅ Se agregó _id para que coincida con la API de Sanity
   nombre: string;
   descripcion: string;
   precio: number;
   imagenUrl: string;
   slug: string;
 }
+
 interface PaquetesProps {
   paquetes: Paquete[];
 }
 
 export function Paquetes({ paquetes }: PaquetesProps) {
   return (
-    <section id="paquetes" className="py-8">
-      <h2 className="text-2xl font-bold mb-6">Paquetes</h2>
-      <div className="grid md:grid-cols-3 gap-6">
-        {paquetes.map((paq) => (
-          <Card key={paq.slug}>
-            {/* Imagen del paquete */}
-            {paq.imagenUrl && (
-              <Image 
-                src={paq.imagenUrl} 
-                alt={paq.nombre} 
-                width={400} height={250} 
-                className="w-full h-40 object-cover rounded-md mb-4" 
-              />
-            )}
-            <h3 className="text-xl font-semibold">{paq.nombre}</h3>
-            <p className="text-sm text-gray-700 mb-2">{paq.descripcion}</p>
-            <p className="font-semibold">Precio: ${paq.precio}</p>
-          </Card>
+    <section id="paquetes" className="py-12 text-center">
+      <h2 className="text-3xl font-bold text-primary mb-8">Nuestros Paquetes</h2>
+      <p className="text-lg text-secondary mb-6">
+        Descubre las mejores opciones para tu viaje soñado a Disney.
+      </p>
+      <div className="grid md:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto">
+        {paquetes.map((paq, index) => (
+          <motion.div
+            key={paq._id} // ✅ Ahora usamos `_id` como key
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <Card>
+              {paq.imagenUrl && (
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden rounded-md"
+                >
+                  <Image 
+                    src={paq.imagenUrl} 
+                    alt={paq.nombre} 
+                    width={400} 
+                    height={250} 
+                    className="w-full h-48 object-cover rounded-md" 
+                  />
+                </motion.div>
+              )}
+
+              <h3 className="text-xl font-semibold mt-4 text-text">{paq.nombre}</h3>
+              <p className="text-md text-gray-700 mb-3">{paq.descripcion}</p>
+              <p className="text-lg font-bold text-accent">Precio: ${paq.precio}</p>
+
+              {/* <motion.a
+                href={`/paquetes/${paq.slug}`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-4 inline-block px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-accent transition-all"
+              >
+                Ver Detalles
+              </motion.a> */}
+            </Card>
+          </motion.div>
         ))}
       </div>
     </section>

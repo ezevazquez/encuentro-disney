@@ -12,18 +12,18 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    if (process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true') {
-      return [
-        {
-          source: '/((?!maintenance).*)',
-          destination: '/maintenance',
-          permanent: false,
-        },
-      ];
-    }
-    return [];
-  },
+  // async redirects() {
+  //   if (process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'false') {
+  //     return [
+  //       {
+  //         source: '/((?!maintenance).*)',
+  //         destination: '/maintenance',
+  //         permanent: false,
+  //       },
+  //     ];
+  //   }
+  //   return [];
+  // },
 };
 
 export default nextConfig;
