@@ -9,10 +9,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-secondary", // Primary button using theme colors
-        secondary: "bg-secondary text-white hover:bg-primary border border-secondary", // Secondary button
-        outline: "border border-primary text-primary hover:bg-primary hover:text-white", // Outline button
-        accent: "bg-accent text-white hover:bg-accent/90", // Accent button
+        default: "bg-[#F20544] text-white hover:bg-[#d00339] shadow-md", // Direct color value
+        secondary: "bg-[#7D4EC2] text-white hover:bg-[#6a3fa6] shadow-md", // Direct color value
+        outline: "border-2 border-[#F20544] text-[#F20544] hover:bg-[#F20544] hover:text-white", // Direct color value
+        accent: "bg-[#F28729] text-white hover:bg-[#d97520] shadow-md", // Direct color value
+        muted: "bg-[#F2E0D5] text-foreground hover:bg-[#e8d0c3] border border-border", // Direct color value
       },
       size: {
         sm: "h-8 px-3 text-sm",

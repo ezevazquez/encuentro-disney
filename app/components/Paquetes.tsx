@@ -20,9 +20,9 @@ interface PaquetesProps {
 
 export function Paquetes({ paquetes }: PaquetesProps) {
   return (
-    <section id="paquetes" className="py-12 text-center">
-      <h2 className="text-3xl font-bold text-primary mb-8">Nuestros Paquetes</h2>
-      <p className="text-lg text-secondary mb-6">Descubre las mejores opciones para tu viaje soñado a Disney.</p>
+    <section id="paquetes" className="py-12 text-center w-full bg-[#F2E0D5]">
+      <h2 className="text-3xl font-bold text-[#1a1a1a] mb-8">Nuestros Paquetes</h2>
+      <p className="text-lg text-[#1a1a1a] mb-6">Descubre las mejores opciones para tu viaje soñado a Disney.</p>
       <div className="grid md:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto">
         {paquetes.map((paq, index) => (
           <motion.div
@@ -48,9 +48,9 @@ export function Paquetes({ paquetes }: PaquetesProps) {
                 </motion.div>
               )}
 
-              <h3 className="text-xl font-semibold mt-4 text-text">{paq.nombre}</h3>
+              <h3 className="text-xl font-semibold mt-4 text-[#1a1a1a]">{paq.nombre}</h3>
               <p className="text-md text-gray-700 mb-3">{paq.descripcion}</p>
-              <p className="text-lg font-bold text-accent">Precio: ${paq.precio}</p>
+              <p className="text-lg font-bold text-[#F28729]">Precio: ${paq.precio}</p>
 
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -58,7 +58,7 @@ export function Paquetes({ paquetes }: PaquetesProps) {
                 transition={{ duration: 0.2 }}
                 className="mt-4"
               >
-                <Button variant="default" size="md">
+                <Button variant="default" size="md" className="font-semibold">
                   Ver Detalles
                 </Button>
               </motion.div>

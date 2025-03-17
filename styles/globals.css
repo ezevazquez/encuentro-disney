@@ -6,11 +6,11 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --primary: #f20544; /* Main brand color */
+  --primary: #f20544;
   --primary-foreground: #ffffff;
-  --secondary: #7d4ec2; /* Purple accent */
+  --secondary: #7d4ec2;
   --secondary-foreground: #ffffff;
-  --accent: #f28729; /* Orange accent */
+  --accent: #f28729;
   --accent-foreground: #ffffff;
   --muted: #f2e0d5;
   --muted-foreground: #1a1a1a;
@@ -24,25 +24,20 @@
   --popover-foreground: #1a1a1a;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --chart-1: 0 84% 60%;
-  --chart-2: 245 58% 51%;
-  --chart-3: 25 95% 53%;
-  --chart-4: 142 71% 45%;
-  --chart-5: 172 66% 50%;
 }
 
 /* 🌙 Dark Mode */
 .dark {
   --background: #1a1a1a;
   --foreground: #ffffff;
-  --primary: #f28729; /* Orange becomes primary in dark mode */
+  --primary: #f28729;
   --primary-foreground: #1a1a1a;
-  --secondary: #9abf75; /* Green accent in dark mode */
+  --secondary: #9abf75;
   --secondary-foreground: #1a1a1a;
-  --accent: #f20544; /* Red accent in dark mode */
+  --accent: #f20544;
   --accent-foreground: #ffffff;
   --muted: #2d2d2d;
-  --muted-foreground: #ffffff;
+  --muted-foreground: #f2e0d5;
   --border: #444;
   --input: #444;
   --ring: #9abf75;
@@ -67,25 +62,6 @@
   }
 }
 
-/* Remove the duplicate button styles since we're using the Button component */
-/* ✨ Estilo de Botones */
-/* .btn {
-  @apply px-6 py-3 rounded-lg shadow-md text-lg transition-all;
-}
-
-/* Variantes de Botón */
-/* .btn-primary {
-  @apply bg-primary text-white hover:bg-secondary;
-}
-
-.btn-secondary {
-  @apply bg-white text-primary border border-primary hover:bg-gray-200;
-}
-
-.btn-outline {
-  @apply border border-primary text-primary hover:bg-primary hover:text-white;
-} */
-
 /* 📦 Cards */
 .card {
   @apply p-6 bg-white rounded-lg shadow-lg border border-gray-200;
@@ -95,7 +71,7 @@
 h1,
 h2,
 h3 {
-  @apply font-bold text-primary;
+  @apply font-bold text-[#1a1a1a];
 }
 
 h1 {
@@ -113,5 +89,54 @@ h3 {
 /* 📏 Espaciado General */
 .container {
   @apply max-w-6xl mx-auto px-6;
+}
+
+/* Custom color classes for direct application */
+.bg-color1 {
+  background-color: #f20544;
+}
+.bg-color2 {
+  background-color: #7d4ec2;
+}
+.bg-color3 {
+  background-color: #9abf75;
+}
+.bg-color4 {
+  background-color: #f28729;
+}
+.bg-color5 {
+  background-color: #f2e0d5;
+}
+
+.text-color1 {
+  color: #f20544;
+}
+.text-color2 {
+  color: #7d4ec2;
+}
+.text-color3 {
+  color: #9abf75;
+}
+.text-color4 {
+  color: #f28729;
+}
+.text-color5 {
+  color: #f2e0d5;
+}
+
+.border-color1 {
+  border-color: #f20544;
+}
+.border-color2 {
+  border-color: #7d4ec2;
+}
+.border-color3 {
+  border-color: #9abf75;
+}
+.border-color4 {
+  border-color: #f28729;
+}
+.border-color5 {
+  border-color: #f2e0d5;
 }
 

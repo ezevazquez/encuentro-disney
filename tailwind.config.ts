@@ -2,7 +2,12 @@
 import type { Config } from "tailwindcss"
 
 const config: Config = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,24 +17,24 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#F20544", // Direct color value
+          foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#7D4EC2", // Direct color value
+          foreground: "#ffffff",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#F2E0D5", // Direct color value
+          foreground: "#1a1a1a",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#F28729", // Direct color value
+          foreground: "#ffffff",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -40,11 +45,11 @@ const config: Config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          "1": "#F20544", // Direct color value
+          "2": "#7D4EC2", // Direct color value
+          "3": "#9ABF75", // Direct color value
+          "4": "#F28729", // Direct color value
+          "5": "#F2E0D5", // Direct color value
         },
       },
       borderRadius: {
