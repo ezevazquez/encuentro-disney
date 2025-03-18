@@ -6,7 +6,6 @@ export interface Paquete {
   descripcion: string
   precio: number
   imagenUrl: string
-  slug: string
 }
 
 export async function getPaquetes(): Promise<Paquete[]> {
@@ -16,15 +15,16 @@ export async function getPaquetes(): Promise<Paquete[]> {
       nombre,
       descripcion,
       precio,
-      "imagenUrl": imagen.asset->url,
-      slug
+      "imagenUrl": imagen.asset->url
     } | order(nombre asc)
   `
 
   const resultados = await sanityClient.fetch(query, {}, { cache: 'no-store' })
 
   return resultados.map((p: any) => ({
-    ...p,
-    slug: p.slug.current,
+    nombre: p.nombre,
+    descripcion: p.descripcion,
+    precio: p.precio,
+    imagenUrl: p.imagenUrl
   }))
 }
