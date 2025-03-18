@@ -58,7 +58,7 @@ export function Hero() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="rounded-full px-10 shadow-lg bg-[#8e6bc7] hover:bg-[#7D4EC2]"
+                  className="px-10 shadow-lg bg-[#8e6bc7] hover:bg-[#7D4EC2]"
                 >
                   Explorar opciones
                 </Button>
@@ -67,7 +67,7 @@ export function Hero() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="rounded-full px-10 shadow-lg bg-[#f28729] hover:bg-[#ff7700]"
+                  className="px-10 shadow-lg bg-[#f28729] hover:bg-[#ff7700]"
                 >
                   Pedir cotización
                 </Button>

@@ -1,7 +1,9 @@
+
 "use client"
 import { motion } from "framer-motion"
 import { Button } from "./Button"
 import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa"
 
 export function CTA() {
   return (
@@ -31,21 +33,40 @@ export function CTA() {
           <p className="text-lg max-w-xl mx-auto mb-8">
             ¿Listo para vivir la experiencia Disney? Contáctanos y planifica tu viaje inolvidable.
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="inline-block"
-          >
-            <Link href="https://forms.gle/1mLCZMexbt9WK4og9">
-              <Button variant="accent" size="lg" className="font-bold border-2 border-white">
-                Pedir cotización
-              </Button>
-            </Link>
-          </motion.div>
+
+          {/* Contenedor de los botones */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            {/* Botón de Cotización */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="w-full md:w-auto"
+            >
+              <Link href="https://forms.gle/1mLCZMexbt9WK4og9">
+                <Button variant="accent" size="lg" className="font-bold border-2 border-white w-full md:w-auto">
+                  Pedir cotización
+                </Button>
+              </Link>
+            </motion.div>
+
+            {/* Botón de WhatsApp */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="w-full md:w-auto"
+            >
+              <Link href="https://wa.me/5493586109849">
+                <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold border-2 border-white flex items-center justify-center gap-2 w-full md:w-auto">
+                  <FaWhatsapp size={20} /> WhatsApp
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+
         </motion.div>
       </div>
     </section>
   )
 }
-
