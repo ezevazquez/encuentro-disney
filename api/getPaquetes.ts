@@ -6,7 +6,7 @@ export interface Paquete {
   descripcion: string
   precio: number
   imagenUrl: string
-  slug: string // <- Cambiamos a string
+  slug: string
 }
 
 export async function getPaquetes(): Promise<Paquete[]> {
@@ -21,12 +21,10 @@ export async function getPaquetes(): Promise<Paquete[]> {
     } | order(nombre asc)
   `
 
-  const resultados = await sanityClient.fetch(query)
+  const resultados = await sanityClient.fetch(query, {}, { cache: 'no-store' })
 
-  // Transformamos `slug` de { current: string } a string plano
   return resultados.map((p: any) => ({
     ...p,
-    slug: p.slug.current, // Convertimos el objeto slug a string
+    slug: p.slug.current,
   }))
 }
-
