@@ -12,5 +12,8 @@ export async function getFAQ(): Promise<FAQData[]> {
       respuesta
     } | order(_createdAt asc)
   `
-  return await sanityClient.fetch(query)
+
+  const resultados = await sanityClient.fetch(query, {}, { cache: 'no-store' })
+
+  return resultados
 }

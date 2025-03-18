@@ -14,6 +14,8 @@ export async function getTestimonios(): Promise<TestimonioData[]> {
       "imagenUrl": imagen.asset->url
     } | order(_createdAt desc)
   `
-  return await sanityClient.fetch(query)
-}
 
+  const resultados = await sanityClient.fetch(query, {}, { cache: 'no-store' })
+
+  return resultados
+}
