@@ -58,7 +58,7 @@
   }
 
   a {
-    @apply text-primary hover:text-accent underline transition-all;
+    @apply text-primary hover:text-accent transition-all;
   }
 }
 
@@ -71,7 +71,7 @@
 h1,
 h2,
 h3 {
-  @apply font-bold text-[#1a1a1a];
+  @apply font-bold;
 }
 
 h1 {
@@ -88,7 +88,30 @@ h3 {
 
 /* 📏 Espaciado General */
 .container {
-  @apply max-w-6xl mx-auto px-6;
+  @apply max-w-6xl mx-auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Touch scrolling for testimonials */
+@media (pointer: coarse) {
+  #testimonios .scrollbar-hide {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* Custom color classes for direct application */

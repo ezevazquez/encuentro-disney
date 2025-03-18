@@ -35,7 +35,7 @@ export default async function HomePage() {
     <>
       <Navbar />
       <Hero />
-      <main className="container mx-auto px-6">
+      <main>
         <Paquetes paquetes={paquetes as any} />
         <Testimonios testimonios={testimonios} />
         <FAQ faqs={faqs} />

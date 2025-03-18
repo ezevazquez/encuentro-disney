@@ -1,57 +1,83 @@
 "use client"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { Button } from "./Button"
+import Link from "next/link"
 
 export function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen bg-background text-foreground overflow-hidden">
-      {/* Background Image with Blur Effect */}
+    <section className="relative flex flex-col justify-center min-h-screen bg-background text-foreground overflow-hidden">
+      {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/hero-background.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "blur(2px)",
-          opacity: .9,
         }}
       ></div>
 
-      {/* Overlay to improve text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-45 z-10"></div>
 
       {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center px-6 z-20"
-      >
-        <Image
-          src="/logo.png"
-          alt="Encuentro con Disney"
-          width={250}
-          height={250}
-          priority
-          className="mx-auto rounded-full shadow-xl border-4 border-[#F20544]"
-        />
-        <h1 className="text-5xl font-disney text-white mt-6 drop-shadow-lg">¡Vive la magia de Disney con nosotros!</h1>
-        <p className="text-xl text-white mt-4 max-w-2xl mx-auto">
-          Planificamos la mejor experiencia para tu viaje soñado con paquetes exclusivos y atención personalizada.
-        </p>
+      <div className="container mx-auto px-8 z-20 relative flex items-center h-screen">
+        <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+          </motion.div>
 
-        {/* Customizable Overlay Text */}
-        <div className="mt-8 bg-[#F20544] bg-opacity-80 py-4 px-6 rounded-lg inline-block">
-          <p className="text-2xl font-bold text-white">¡Ofertas especiales este mes!</p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight"
+          >
+            Viví la magia de Disney con nosotros
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-lg text-white mb-8 max-w-xl"
+          >
+            Planificamos la mejor experiencia para tu viaje soñado con paquetes exclusivos y atención personalizada.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <Link href="#paquetes">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="rounded-full px-10 shadow-lg bg-[#8e6bc7] hover:bg-[#7D4EC2]"
+                >
+                  Explorar opciones
+                </Button>
+              </Link>
+              <Link href="#contacto">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="rounded-full px-10 shadow-lg bg-[#f28729] hover:bg-[#ff7700]"
+                >
+                  Pedir cotización
+                </Button>
+              </Link>
+            </div>
+
+
+          </motion.div>
         </div>
-      </motion.div>
-
-      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="mt-8 z-20">
-        <Button variant="accent" size="lg" className="shadow-lg font-bold">
-          Explorar Opciones ✨
-        </Button>
-      </motion.div>
+      </div>
     </section>
   )
 }
