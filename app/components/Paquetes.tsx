@@ -11,7 +11,6 @@ interface Paquete {
   descripcion: string
   precio: number
   imagenUrl: string
-  slug: string
 }
 
 interface PaquetesProps {

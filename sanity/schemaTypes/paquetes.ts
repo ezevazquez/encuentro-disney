@@ -16,26 +16,17 @@ export default defineType({
       title: "Descripción",
       type: "text",
     }),
-    defineField({
-      name: "precio",
-      title: "Precio",
-      type: "number",
-    }),
+    // defineField({
+    //   name: "precio",
+    //   title: "Precio",
+    //   type: "number",
+    // }),
     defineField({
       name: "imagen",
       title: "Imagen",
       type: "image",
       options: {
         hotspot: true, // permite hacer focus en partes de la imagen
-      },
-    }),
-    defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "nombre", // genera el slug a partir del nombre
-        maxLength: 96,
       },
     }),
   ],
