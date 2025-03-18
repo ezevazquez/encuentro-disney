@@ -16,7 +16,7 @@ export function FAQ({ faqs }: FAQProps) {
         <h2 className="text-3xl font-bold text-white text-center mb-12">Preguntas Frecuentes</h2>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="multiple" className="space-y-4">
             {faqs.map((item, idx) => (
               <AccordionItem
                 key={idx}
