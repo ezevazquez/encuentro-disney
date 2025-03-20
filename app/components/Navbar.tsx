@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center px-4 md:px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center no-underline relative z-10">
-            <div className="relative h-10 w-20">
+            <div className="relative h-20 w-20">
               <Image src="/logo.png" alt="Logo" fill className="object-contain" priority />
             </div>
           </Link>
