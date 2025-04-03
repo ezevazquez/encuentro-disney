@@ -41,7 +41,7 @@ export default async function HomePage() {
       <main>
         <AgenteCertificado agenteCertificado={agenteCertificado} />
         <Paquetes paquetes={paquetes as any} />
-        <Testimonios testimonios={testimonios} />
+        {/* <Testimonios testimonios={testimonios} /> */}
         <FAQ faqs={faqs} />
         <CTA />
       </main>
