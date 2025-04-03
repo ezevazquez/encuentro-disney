@@ -63,15 +63,15 @@ const Navbar: React.FC = () => {
                 scrolled ? "text-gray-800" : "text-white"
               }`}
             >
-              Paquetes
+              Promos
             </Link>
             <Link
-              href="#testimonios"
+              href="#agente"
               className={`font-medium transition-all no-underline text-base hover:opacity-80 ${
                 scrolled ? "text-gray-800" : "text-white"
               }`}
             >
-              Testimonios
+              ¿Por qué un agente certificado?
             </Link>
             <Link href="#contacto">
               <Button

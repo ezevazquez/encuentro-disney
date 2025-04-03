@@ -7,8 +7,8 @@ export function Header() {
         <span className="text-xl font-bold">Encuentro con Disney</span>
         <div className="space-x-6">
           <Link href="/">Inicio</Link>
-          <Link href="/#paquetes">Paquetes</Link>
-          <Link href="/#testimonios">Testimonios</Link>
+          <Link href="/#agente">¿Por qué un agente certificado?</Link>
+          <Link href="/#paquetes">Promos</Link>
           <Link href="/#contacto">Contacto</Link>
         </div>
       </nav>

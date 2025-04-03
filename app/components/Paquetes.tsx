@@ -25,7 +25,7 @@ export function Paquetes({ paquetes }: PaquetesProps) {
     <section id="paquetes" className="flex items-center justify-center min-h-screen w-full bg-[#F2E0D5] py-20">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-[#1a1a1a] mb-4">Nuestras propuestas ✈️</h2>
+          <h2 className="text-5xl font-bold text-[#1a1a1a] mb-4">Nuestras promos ✈️</h2>
           <p className="text-lg text-[#1a1a1a] max-w-2xl mx-auto">
             Descubre las mejores opciones para tu viaje soñado a Disney.
           </p>
