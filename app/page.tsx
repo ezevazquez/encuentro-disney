@@ -9,12 +9,15 @@ import { getTestimonios } from "@/api/getTestimonios"
 import { getFAQ } from "@/api/getFAQ"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import { AgenteCertificado } from "./components/AgenteCertificado"
+import { getAgenteCertificado } from "@/api/getAgenteCertificado"
 
 export default async function HomePage() {
   // Obtenemos datos desde Sanity (el componente de página es del lado servidor por defecto)
   const paquetes = await getPaquetes()
   const testimonios = await getTestimonios()
   const faqs = await getFAQ()
+  const agenteCertificado = await getAgenteCertificado()
 
   // Check if maintenance mode is enabled
   const maintenanceMode = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true"
@@ -36,6 +39,7 @@ export default async function HomePage() {
       <Navbar />
       <Hero />
       <main>
+        <AgenteCertificado agenteCertificado={agenteCertificado} />
         <Paquetes paquetes={paquetes as any} />
         <Testimonios testimonios={testimonios} />
         <FAQ faqs={faqs} />

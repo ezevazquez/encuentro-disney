@@ -18,6 +18,9 @@ interface PaquetesProps {
 }
 
 export function Paquetes({ paquetes }: PaquetesProps) {
+  const displayedPaquetes = paquetes.slice(0, 4)
+  const hasMorePaquetes = paquetes.length > 4
+
   return (
     <section id="paquetes" className="flex items-center justify-center min-h-screen w-full bg-[#F2E0D5] py-20">
       <div className="container mx-auto px-8">
@@ -29,7 +32,7 @@ export function Paquetes({ paquetes }: PaquetesProps) {
         </div>
 
         <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
-          {paquetes.map((paq, index) => (
+          {displayedPaquetes.map((paq, index) => (
             <motion.div
               key={paq._id}
               initial={{ opacity: 0, y: 50 }}
@@ -77,6 +80,20 @@ export function Paquetes({ paquetes }: PaquetesProps) {
             </motion.div>
           ))}
         </div>
+        {hasMorePaquetes && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="flex justify-center mt-12"
+          >
+            <Link href="/paquetes">
+              <Button variant="secondary" size="lg" className="font-semibold px-8">
+                Ver todos los paquetes
+              </Button>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   )
