@@ -24,7 +24,14 @@ export function FAQ({ faqs }: FAQProps) {
                 className="bg-white rounded-lg shadow-md p-4 border-2 border-[#F2E0D5]"
               >
                 <AccordionTrigger className="text-lg font-semibold text-[#F20544]">{item.pregunta}</AccordionTrigger>
-                <AccordionContent className="text-md text-[#1a1a1a] mt-2">{item.respuesta}</AccordionContent>
+                <AccordionContent className="text-md text-[#1a1a1a] mt-2">
+                  {item.respuesta.split('\n').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

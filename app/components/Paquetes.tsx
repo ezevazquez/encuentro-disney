@@ -60,7 +60,14 @@ export function Paquetes({ paquetes }: PaquetesProps) {
 
                 <div className="flex-grow flex flex-col">
                   <h3 className="text-xl font-semibold mt-4 text-[#1a1a1a]">{paq.nombre}</h3>
-                  <p className="text-md text-gray-700 mb-3 flex-grow">{paq.descripcion}</p>
+                  <p className="text-md text-gray-700 mb-3 flex-grow">
+                    {paq.descripcion.split('\n').map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
                   {/* <p className="text-lg font-bold text-[#F28729]">Precio: ${paq.precio}</p> */}
 
                   <motion.div

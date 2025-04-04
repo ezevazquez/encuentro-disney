@@ -62,7 +62,14 @@ export function AgenteCertificado({ agenteCertificado }: AgenteCertificadoProps)
                   <h3 className="text-2xl font-bold text-[#7D4EC2]">{agenteCertificado.titulo}</h3>
                 </div>
 
-                <p className="text-[#1a1a1a] mb-4">{agenteCertificado.descripcion}</p>
+                <p className="text-[#1a1a1a] mb-4">
+                  {agenteCertificado.descripcion.split('\n').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
+                </p>
 
                 {/* "Ver más" text link instead of button */}
                 {agenteCertificado.informacionDetallada && agenteCertificado.informacionDetallada.length > 0 && (
