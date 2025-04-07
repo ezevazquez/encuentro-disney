@@ -8,18 +8,18 @@ export interface AgenteCertificadoData {
   imagenUrl?: string
 }
 
-export async function getAgenteCertificado(): Promise<AgenteCertificadoData | null> {
+export async function getAgenteCertificado(): Promise<AgenteCertificadoData[] | null> {
   const query = `
-    *[_type == "agenteCertificado"][0]{
+    *[_type == "agenteCertificado"]{
       titulo,
       descripcion,
       informacionDetallada,
       "imagenUrl": imagen.asset->url
-    }
+    } | order(_createdAt asc)
   `
 
-  const resultado = await sanityClient.fetch(query, {}, { cache: "no-store" })
+  const resultados = await sanityClient.fetch(query, {}, { cache: "no-store" })
 
-  return resultado || null
+  return resultados.length > 0 ? resultados : null
 }
 

@@ -126,8 +126,8 @@ export function Paquetes({ paquetes }: PaquetesProps) {
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   className="snap-center flex-shrink-0"
                   style={{
-                    width: "calc(100% - 1rem)",
-                    maxWidth: "400px",
+                    width: "calc(100% - 2rem)",
+                    maxWidth: "320px", // Changed from 400px to 320px to make cards narrower
                     marginRight: index === paquetes.length - 1 ? "0" : "0.5rem",
                   }}
                 >
@@ -146,8 +146,6 @@ export function Paquetes({ paquetes }: PaquetesProps) {
                 <ChevronRight className="h-5 w-5 md:h-6 md:w-6 text-[#7D4EC2]" />
               </button>
             )}
-
-            
           </div>
         ) : (
           // Grid layout for 3 or fewer cards
@@ -158,6 +156,7 @@ export function Paquetes({ paquetes }: PaquetesProps) {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="max-w-[320px] mx-auto w-full" // Added max-width and centering
               >
                 <PaqueteCard paquete={paq} isMobile={isMobile} />
               </motion.div>
