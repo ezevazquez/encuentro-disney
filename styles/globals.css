@@ -162,4 +162,9 @@ html {
 .border-color5 {
   border-color: #f2e0d5;
 }
-
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

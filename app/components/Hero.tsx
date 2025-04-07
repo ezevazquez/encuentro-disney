@@ -60,7 +60,7 @@ export function Hero() {
                   size="lg"
                   className="px-10 shadow-lg bg-[#8e6bc7] hover:bg-[#7D4EC2]"
                 >
-                  Explorar opciones
+                  Explorar promos ✨
                 </Button>
               </Link>
               <Link href="#contacto">
@@ -69,7 +69,7 @@ export function Hero() {
                   size="lg"
                   className="px-10 shadow-lg bg-[#f28729] hover:bg-[#ff7700]"
                 >
-                  Pedir cotización
+                  Pedir cotización ✈️
                 </Button>
               </Link>
             </div>

@@ -27,9 +27,8 @@ export function AgenteCertificado({ agenteCertificado }: AgenteCertificadoProps)
       <div className="container mx-auto px-8">
         {/* Section Title */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-[#7D4EC2] mb-4">Soy agente certificada de Disney</h2>
+          <h2 className="text-4xl font-bold text-[#7D4EC2] mb-4">¿Quién soy yo?</h2>
           <p className="text-lg text-[#1a1a1a] max-w-2xl mx-auto">
-            ¿Qué es eso?
           </p>
         </div>
 
