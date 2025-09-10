@@ -211,7 +211,7 @@ function PaqueteCard({ paquete, isMobile }: { paquete: Paquete; isMobile: boolea
           className="overflow-hidden rounded-md h-48"
         >
           <Image
-            src={paquete.imagenUrl || "/placeholder.svg"}
+            src={paquete.imagenUrl}
             alt={paquete.nombre}
             width={400}
             height={250}
