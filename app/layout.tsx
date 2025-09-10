@@ -4,8 +4,8 @@ import "../styles/globals.css"
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
-  title: "Encuentro con Disney",
-  description: "Encuentro con Disney",
+  title: "Encuentro con Disney | Paquetes, Entradas, Hoteles y Asesoría Oficial",
+  description: "Organizá tu viaje a Disney con paquetes a medida, entradas, hoteles dentro y fuera del parque, financiación y asesoría de un agente certificado. Viví la magia sin estrés.",
 }
 
 export default function RootLayout({
