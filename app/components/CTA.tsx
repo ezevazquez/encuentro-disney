@@ -57,7 +57,7 @@ export function CTA() {
               transition={{ duration: 0.2 }}
               className="w-full md:w-auto"
             >
-              <Link href="https://wa.me/5493586109849">
+              <Link href="https://wa.me/5493582406070">
                 <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold border-2 border-white flex items-center justify-center gap-2 w-full md:w-auto">
                   <FaWhatsapp size={20} /> WhatsApp
                 </Button>
